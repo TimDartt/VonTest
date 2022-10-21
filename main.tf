@@ -19,7 +19,10 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = "eastus"
-  tags     = { "Owner" = "Moi!" }
+  tags = {
+    "Owner"   = "Moi!"
+    "version" = "Bob"
+  }
 }
 
 # Create a virtual network
